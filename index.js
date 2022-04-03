@@ -1,21 +1,49 @@
-function scalerMatrix (arr1,arr2){
+let sentence = 'Life is tough, my darling, but so are you.
+-Stephanie Bennett Henry'
+let vowels = 'aeiou'
+function sentenceReader(sentence){
 
-    let dotProduct = 0
-
-    for (i=0; i<arr1.length; i++){
-      for (i=0; i<arr2.length; i++) {
-        dotProduct+=arr1[i]*arr2[i]
-      }
-
+    // return sentence.match(/[aeiou]/gi)?sentence.match(/[aeiou]/gi).length:0
+    if (sentence.match(/[aeiou]/gi)){
+        return `The length of the sentence is ${sentence.length},The number of the word in the sentence is ${sentence.split(' ').length}, The vowels is ${sentence.match(/[aeiou]/gi).length}`;
     }
-    if (dotProduct === 0){
-      return ('the two arrays are orthagonal, and the dot product is : '+ dotProduct)
-    } else {
-      return ('the two arrays are not orthagonal, and the dot product is : '+ dotProduct)
+    else {
+        return 0;
     }
+}
+
+console.log(sentenceReader(sentence))
+// sentenceReader(sentence)
+
+// write a search procedure (C,STR,VARFIND, VARPOS) which searches for a character C in a string STR , and returns its postion if it exists. FIND will be true is the element exists 
+
+// write a DELETE  procedure (C,STR,VARFIND)  which deletes the firstoccurence of a character C in a string STR , if it exists 
+
+// write  a DELETE_ALL procedure (C,STR) which deletes all occurecnce of an element of an element C in a string STR, if it exists
+
+// let text = (C,STR,VARFIND, VARPOS)
+// // let postion = text.search("C")
 
 
- }
+// function text(C,STR,VARFIND, VARPOS){
+//     if 
+// }
 
-   console.log(scalerMatrix([3,-1], [7,5]))
-   console.log(scalerMatrix([1,2,0], [2,-1,10]))
+// function inString(searchStr, searchC) {
+
+//     let index = searchStr.indexof(searchC);
+
+//     if(index !== -1) return index;
+//     return;
+// }
+
+
+// function searchProcedure(c, str, find, pos) {
+//     pos = inString (str, c)
+//      find = Boolean(pos)
+
+// }
+
+
+// let sentence = "Even though you’re fed up you gotta keep your head up "
+// let vowels = []
